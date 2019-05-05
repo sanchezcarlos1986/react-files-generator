@@ -1,6 +1,8 @@
-# component='NewComponent'
+# Name: react-component-generator
+# Brief: Crea un nuevo componente basado en templates
+# Author: Carlos Sánchez
 
-echo "Enter Component name"
+echo "Please enter a name for your new component"
 read var
 
 if [ ! -z "$var" ]
@@ -9,7 +11,7 @@ then
   sed -e "s/COMPONENT_NAME/$var/g" templates/index.js > src/components/$var/index.js
   sed -e "s/COMPONENT_NAME/$var/g" templates/index.test.js > src/components/$var/index.test.js
   sed -e "s/COMPONENT_NAME/$var/g" templates/style.js > src/components/$var/style.js
-  echo 'El componente "'$var'" fue creado correctamente.'
+  echo 'Your component "'$var'" was created successfully.'
 else
-  echo 'No puedes crear un componente sin nombre'
+  echo "It's not possible to create a nameless component."
 fi
