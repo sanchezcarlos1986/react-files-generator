@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import StyleWrapper from './style'
 
-const COMPONENT_NAME = props => {
+function COMPONENT_NAME(props) {
   const [greeting, setGreeting] = useState('')
 
   useEffect(() => {
