@@ -38,7 +38,6 @@ readline.question(`Please enter a name for your new component: `, (text) => {
   const name = `${text.charAt(0).toUpperCase()}${text.slice(1)}`
   const source = './templates/'
   const destiny = `${__dirname}/src/components/${name}`
-  console.log('destiny:', destiny)
 
   let componentExists = false
   
