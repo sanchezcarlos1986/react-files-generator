@@ -16,8 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "component": "clear && ./make_component.sh",
-    "component2": "clear && node ./make_component.js"
+    "component": "clear && node ./make_component.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -42,6 +41,7 @@
   },
   "devDependencies": {
     "fs-extra": "^7.0.1",
-    "readline": "^1.3.0"
+    "readline": "^1.3.0",
+    "replace-in-file": "^4.0.0"
   }
 }
