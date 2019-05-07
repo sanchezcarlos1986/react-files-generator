@@ -27,14 +27,15 @@ function copyFile(source, destiny, name) {
         to: name,
       }
       replace(options)
-        .then(results => console.log('todo ok', results))
-        .catch(err => console.error('todo malo', err))
+        // .then(results => console.log('todo ok', results))
+        .catch(err => console.error("Sorry, we could't replace the text", err))
     })
     .catch(err => console.error(alert, `Sorry, we've got the following error: ${err}`))
 }
 
-readline.question(`Please enter a name for your new component: `, (text) => {
+readline.question(`Please enter a name for your new component: `, (input) => {
   // Capitalize first letter of new component name
+  const text = input.trim()
   const name = `${text.charAt(0).toUpperCase()}${text.slice(1)}`
   const source = './templates/'
   const destiny = `${__dirname}/src/components/${name}`
@@ -44,7 +45,7 @@ readline.question(`Please enter a name for your new component: `, (text) => {
   fs.pathExists(destiny).then(exists => {
     componentExists = exists
 
-    if (name) {
+    if (name && name !== '') {
       if (componentExists) {
         console.error(warning, `Sorry, but the component ${name} already exists.`)
       } else {
