@@ -5,6 +5,7 @@
   "dependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
+    "inquirer": "^6.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -17,12 +18,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "component": "clear && node ./make_component.js"
+    "create": "clear && node ./creator.js"
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/Components/**/*.js",
-      "!src/Components/UI/**/*.js"
+      "src/**/*.js",
+      "!src/**/UI/**/*.js"
     ]
   },
   "eslintConfig": {
