@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 const wrapper = shallow(<COMPONENT_NAME />)
 
 describe('COMPONENT_NAME', () => {
-  it('renders awesomely!', () => {
+  it('renders component awesomely!', () => {
     expect(wrapper.exists()).toBe(true)
   })
 })

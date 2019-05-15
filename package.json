@@ -1,49 +1,22 @@
 {
-  "name": "hooks",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
-    "inquirer": "^6.3.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
-    "react-test-renderer": "^16.8.6",
-    "styled-components": "^4.2.0"
-  },
+  "name": "react-files-generator",
+  "version": "1.0.0",
+  "description": "This project helps you to create standard basic Components or Services for your React projects",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "create": "clear && node ./creator.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "!src/**/UI/**/*.js"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanchezcarlos1986/react-create-component.git"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "keywords": [
+    "react"
+  ],
+  "author": "Carlos Sánchez <sanchez.carlos.1986@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanchezcarlos1986/react-create-component/issues"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "fs-extra": "^7.0.1",
-    "readline": "^1.3.0",
-    "replace-in-file": "^4.0.0"
-  }
+  "homepage": "https://github.com/sanchezcarlos1986/react-create-component#readme"
 }
