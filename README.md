@@ -1,7 +1,7 @@
-This project helps you to create standard basic Components or Services for your React projects
+A CLI to create standard basic Components or Services for your React projects
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-`react-generator`
+`react-generate`

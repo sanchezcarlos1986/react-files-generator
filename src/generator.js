@@ -1,6 +1,6 @@
 /**  
- * Name: react-files-generator
- * Brief: Crea un nuevo componente/servicio/ basado en templates
+ * Name: react-generator
+ * Brief: A CLI to create standard basic Components or Services for your React projects
  * Author: Carlos Sánchez
 */
 
