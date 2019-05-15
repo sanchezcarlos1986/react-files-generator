@@ -1,6 +1,6 @@
 {
   "name": "react-files-generator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "This project helps you to create standard basic Components or Services for your React projects",
   "main": "index.js",
   "scripts": {
