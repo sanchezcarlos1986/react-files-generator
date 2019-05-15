@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/sanchezcarlos1986/react-create-component/issues"
   },
-  "homepage": "https://github.com/sanchezcarlos1986/react-create-component#readme"
+  "homepage": "https://github.com/sanchezcarlos1986/react-create-component#readme",
+  "devDependencies": {
+    "fs-extra": "^8.0.1",
+    "inquirer": "^6.3.1",
+    "replace-in-file": "^4.1.0"
+  }
 }
