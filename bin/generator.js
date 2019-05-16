@@ -1,8 +1,4 @@
-/**  
- * Name: react-generator
- * Brief: A CLI to create standard basic Components or Services for your React projects
- * Author: Carlos Sánchez
-*/
+#!/usr/bin/env node
 
 const fs = require('fs-extra')
 const replace = require('replace-in-file')
@@ -46,8 +42,8 @@ inquirer.prompt([
     const name = answers.type === 'Components'
       ? `${answersName.charAt(0).toUpperCase()}${answersName.slice(1).replace(/ /g, '_')}`
       : answersName.toLowerCase().replace(/ /g, '_')
-    const source = `${__dirname}/templates/${answers.type}`
-    const destiny = `${__dirname}/src/${answers.type}/${name}`
+    const source = `${__dirname}/../templates/${answers.type}`
+    const destiny = `${process.cwd()}/src/${answers.type}/${name}`
 
     // Preguntamos su el componente existe
     let componentExists = false
