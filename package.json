@@ -6,6 +6,9 @@
   "bin": {
     "generator": "./bin/generator.js"
   },
+  "scripts": {
+    "upload": "git push origin master && npm publish"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sanchezcarlos1986/react-create-component.git"
