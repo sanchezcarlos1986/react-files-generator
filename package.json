@@ -1,13 +1,13 @@
 {
   "name": "react-files-generator",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A CLI to create standard basic Components or Services for your React projects",
   "main": "generator.js",
   "bin": {
     "generator": "./bin/generator.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "git push origin master && npm publish"
   },
   "repository": {
     "type": "git",
