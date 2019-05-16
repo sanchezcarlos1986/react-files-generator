@@ -1,10 +1,10 @@
 {
   "name": "react-files-generator",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A CLI to create standard basic Components or Services for your React projects",
   "main": "index.js",
   "bin": {
-    "react-generate": "bin/generate-files"
+    "react-generate": "./bin/generator.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/sanchezcarlos1986/react-create-component#readme",
   "dependencies": {
-    "esm": "^3.2.22",
     "fs-extra": "^8.0.1",
     "inquirer": "^6.3.1",
     "replace-in-file": "^4.1.0"

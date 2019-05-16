@@ -46,7 +46,7 @@ inquirer.prompt([
     const name = answers.type === 'Components'
       ? `${answersName.charAt(0).toUpperCase()}${answersName.slice(1).replace(/ /g, '_')}`
       : answersName.toLowerCase().replace(/ /g, '_')
-    const source = `./templates/${answers.type}`
+    const source = `${__dirname}/templates/${answers.type}`
     const destiny = `${__dirname}/src/${answers.type}/${name}`
 
     // Preguntamos su el componente existe
