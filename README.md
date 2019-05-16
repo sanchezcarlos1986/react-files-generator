@@ -18,7 +18,7 @@ e.g.
 
 This command will ask you what kind of files you want to create, so you can choose between Component or Service, then you'll be able to type a name for it.
 
-Description
+Folders | Detail
 --- | ---
 **Component** | Create a folder with your choosen name (as well as the component's name). Inside you'll find an index.js, an index.test.js and a style.js file. This assume you're working with *styled components* library.
 **Service** | Create a folder with an index.js and an index.test.js file.
