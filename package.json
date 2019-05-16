@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sanchezcarlos1986/react-create-component.git"
+    "url": "git+https://github.com/sanchezcarlos1986/react-files-generator.git"
   },
   "keywords": [
     "react",
@@ -20,9 +20,9 @@
   "author": "Carlos Sánchez <sanchez.carlos.1986@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sanchezcarlos1986/react-create-component/issues"
+    "url": "https://github.com/sanchezcarlos1986/react-files-generator/issues"
   },
-  "homepage": "https://github.com/sanchezcarlos1986/react-create-component#readme",
+  "homepage": "https://github.com/sanchezcarlos1986/react-files-generator#readme",
   "dependencies": {
     "fs-extra": "^8.0.1",
     "inquirer": "^6.3.1",
