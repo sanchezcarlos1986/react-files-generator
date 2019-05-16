@@ -8,6 +8,8 @@ const alert = '\x1b[31m'
 const success = '\x1b[32m'
 const warning = '\x1b[33m'
 
+console.log('RUTA ACTUAL: ', process.cwd())
+
 // Copy Files
 function copyFile(source, destiny, type, name) {
   fs.copy(source, destiny)
@@ -43,7 +45,7 @@ inquirer.prompt([
       ? `${answersName.charAt(0).toUpperCase()}${answersName.slice(1).replace(/ /g, '_')}`
       : answersName.toLowerCase().replace(/ /g, '_')
     const source = `${__dirname}/../templates/${answers.type}`
-    const destiny = `${process.cwd()}/src/${answers.type}/${name}`
+    const destiny = `${process.cwd()}/${name}`
 
     // Preguntamos su el componente existe
     let componentExists = false
