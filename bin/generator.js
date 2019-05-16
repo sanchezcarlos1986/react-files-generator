@@ -8,9 +8,6 @@ const alert = '\x1b[31m'
 const success = '\x1b[32m'
 const warning = '\x1b[33m'
 
-console.log('RUTA ACTUAL: ', process.cwd())
-console.log('RUTA ACTUAL 2: ', process.env.PWD)
-
 // Copy Files
 function copyFile(source, destiny, type, name) {
   fs.copy(source, destiny)
