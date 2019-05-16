@@ -2,7 +2,9 @@ A CLI to create standard basic Components or Services for your React projects
 
 ## Available Scripts
 
-In your project's package.json, add a script task with any name you want, then give it the command *generator*.
+Install this dependency in your proyect using `npm install react-files-generator`.
+
+Then, in your project's package.json, add a script task with any name you want, and give it the command **generator**.
 
 Now, you can run your task to start using the CLI.
 
@@ -13,3 +15,10 @@ e.g.
 `
 
 `npm run mytask`
+
+This command will ask you what kind of files you want to create, so you can choose between Component or Service, then you'll be able to type a name for it.
+
+Description
+--- | ---
+**Component** | Create a folder with your choosen name (as well as the component's name). Inside you'll find an index.js, an index.test.js and a style.js file. This assume you're working with *styled components* library.
+**Service** | Create a folder with an index.js and an index.test.js file.
