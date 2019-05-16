@@ -1,10 +1,10 @@
 {
   "name": "react-files-generator",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A CLI to create standard basic Components or Services for your React projects",
   "main": "index.js",
   "bin": {
-    "react-generate": "./bin/generator.js"
+    "react-files-generator": "./bin/generator.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
