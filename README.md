@@ -16,7 +16,6 @@ e.g.
 
 `npm run mytask`
 
-This command will ask you what kind of files you want to create, so you can choose between Component or Service, then you'll be able to type a name for it.
 
 Folders | Detail
 --- | ---
