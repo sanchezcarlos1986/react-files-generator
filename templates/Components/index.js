@@ -1,22 +1,19 @@
-import React, { useState, useEffect } from 'react'
+// @Dependencies
+import React from 'react'
 import PropTypes from 'prop-types'
-import StyleWrapper from './style'
+import styles from './COMPONENT_NAME.module.scss'
 
-function COMPONENT_NAME(props) {
-  const [greeting, setGreeting] = useState('')
-
-  useEffect(() => {
-    setGreeting('Your new component is: ')
-  }, [])
-
-  return <StyleWrapper className={`COMPONENT_NAME`}>
-    { greeting } COMPONENT_NAME
-  </StyleWrapper>
-}
+// @Component
+const COMPONENT_NAME = () => (
+  <div data-testid="COMPONENT_NAME" className={styles['CLASSNAME']}>
+    COMPONENT_NAME
+  </div>
+)
 
 // @Proptypes
 COMPONENT_NAME.propTypes = {
 
 }
 
+// @Export component
 export default COMPONENT_NAME

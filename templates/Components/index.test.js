@@ -1,11 +1,18 @@
 import React from 'react'
-import COMPONENT_NAME from './'
-import { shallow } from 'enzyme'
+import { render, cleanup } from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect'
+import COMPONENT_NAME from './COMPONENT_NAME.js'
 
-const wrapper = shallow(<COMPONENT_NAME />)
+// Unmount everything from the dom after each test
+afterEach(cleanup)
 
-describe('COMPONENT_NAME', () => {
-  it('renders component awesomely!', () => {
-    expect(wrapper.exists()).toBe(true)
+describe('<COMPONENT_NAME />', () => {
+  test('renders COMPONENT_NAME', () => {
+    // Renders component
+    const { getByTestId } = render(<COMPONENT_NAME />)
+    const component = getByTestId('COMPONENT_NAME')
+  
+    // Asserts
+    expect(component).toBeInTheDocument()
   })
 })

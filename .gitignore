@@ -11,7 +11,9 @@
 # production
 /build
 
+# generated files
 /components
+/services
 
 # misc
 .DS_Store

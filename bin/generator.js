@@ -12,11 +12,23 @@ const warning = '\x1b[33m'
 function copyFile(source, destiny, type, name) {
   fs.copy(source, destiny)
     .then(() => console.log(success, `Your ${type.toLowerCase().slice(0, -1)} "${name}" has been created successfully.`))
+    .then(() => { fs.rename(`${destiny}/index.js`, `${destiny}/${name}.js`) })
+    .then(() => { fs.rename(`${destiny}/index.test.js`, `${destiny}/${name}.test.js`) })
+    .then(() => {
+      const path = `${destiny}/index.module.scss`
+      try {
+        if (fs.existsSync(path)) {
+          fs.rename(path, `${destiny}/${name}.module.scss`)
+        }
+      } catch(err) {
+        console.error(err)
+      }
+    })
     .then(() => {
       const options = {
-        files: `${destiny}/*.js`,
-        from: /COMPONENT_NAME/g,
-        to: name,
+        files: `${destiny}/*.*`,
+        from: [/COMPONENT_NAME/g, /CLASSNAME/g],
+        to: [name, name.toLowerCase()],
       }
       replace(options)
         .catch(err => console.error("Sorry, we could't replace the text", err))
@@ -45,7 +57,7 @@ inquirer.prompt([
     const source = `${__dirname}/../templates/${answers.type}`
     const destiny = `./${answers.type.toLowerCase()}/${name}`
 
-    // Preguntamos su el componente existe
+    // Check if the component exists
     let componentExists = false
 
     fs.pathExists(destiny).then(exists => {
@@ -53,7 +65,7 @@ inquirer.prompt([
 
       if (name && name !== '') {
         if (componentExists) {
-          console.error(warning, `Sorry, but the ${answers.type} ${name} already exists.`)
+          console.error(warning, `Sorry, but the ${answers.type.toLowerCase().slice(0, -1)} ${name} already exists.`)
         } else {
           copyFile(source, destiny, answers.type, name)
         }
