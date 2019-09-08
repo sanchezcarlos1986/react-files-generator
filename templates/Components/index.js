@@ -5,7 +5,7 @@ import styles from './COMPONENT_NAME.module.scss'
 
 // @Component
 const COMPONENT_NAME = () => (
-  <div data-testid="COMPONENT_NAME" className={styles['CLASSNAME']}>
+  <div data-testid="COMPONENT_NAME" className={styles.CLASSNAME}>
     COMPONENT_NAME
   </div>
 )

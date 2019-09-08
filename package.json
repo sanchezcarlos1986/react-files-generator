@@ -1,6 +1,6 @@
 {
   "name": "react-files-generator",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "A CLI to create standard basic Components or Services for your React projects",
   "main": "generator.js",
   "bin": {
