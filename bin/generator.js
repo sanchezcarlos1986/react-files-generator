@@ -55,7 +55,7 @@ inquirer.prompt([
       ? `${answersName.charAt(0).toUpperCase()}${answersName.slice(1).replace(/ /g, '_')}`
       : answersName.toLowerCase().replace(/ /g, '_')
     const source = `${__dirname}/../templates/${answers.type}`
-    const destiny = `./${answers.type.toLowerCase()}/${name}`
+    const destiny = `./src/${answers.type.toLowerCase()}/${name}`
 
     // Check if the component exists
     let componentExists = false
