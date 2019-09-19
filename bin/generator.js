@@ -8,22 +8,24 @@ const alert = '\x1b[31m'
 const success = '\x1b[32m'
 const warning = '\x1b[33m'
 
+const changeDestinyFilename = (destiny, file, name) => {
+  const path = `${destiny}/${file}`
+  try {
+    if (fs.existsSync(path)) {
+      fs.rename(path, `${destiny}/${name}.module.scss`)
+    }
+  } catch(err) {
+    console.error(err)
+  }
+}
+
 // Copy Files
 function copyFile(source, destiny, type, name) {
   fs.copy(source, destiny)
     .then(() => console.log(success, `Your ${type.toLowerCase().slice(0, -1)} "${name}" has been created successfully.`))
-    .then(() => { fs.rename(`${destiny}/index.js`, `${destiny}/${name}.js`) })
-    .then(() => { fs.rename(`${destiny}/index.test.js`, `${destiny}/${name}.test.js`) })
-    .then(() => {
-      const path = `${destiny}/index.module.scss`
-      try {
-        if (fs.existsSync(path)) {
-          fs.rename(path, `${destiny}/${name}.module.scss`)
-        }
-      } catch(err) {
-        console.error(err)
-      }
-    })
+    .then(() => { changeDestinyFilename(destiny, 'index.js', name) })
+    .then(() => { changeDestinyFilename(destiny, 'index.test.js', name) })
+    .then(() => { changeDestinyFilename(destiny, 'index.module.scss', name) })
     .then(() => {
       const options = {
         files: `${destiny}/*.*`,
