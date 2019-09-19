@@ -14,6 +14,7 @@
 # generated files
 /components
 /services
+/src
 
 # misc
 .DS_Store

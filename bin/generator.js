@@ -9,10 +9,13 @@ const success = '\x1b[32m'
 const warning = '\x1b[33m'
 
 const changeDestinyFilename = (destiny, file, name) => {
+  console.log('file:', file)
+  const extension = file.split('.').slice(1).join('.')
+  console.log('extension:', extension)
   const path = `${destiny}/${file}`
   try {
     if (fs.existsSync(path)) {
-      fs.rename(path, `${destiny}/${name}.module.scss`)
+      fs.rename(path, `${destiny}/${name}.${extension}`)
     }
   } catch(err) {
     console.error(err)
